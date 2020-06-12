@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HelloWorld from "../components/HelloWorld"
+import Restore from "../core/store"
 
 Vue.use(VueRouter)
 
@@ -9,6 +10,7 @@ function reRouter(to) {
 }
 
 const router = new VueRouter({
+    mode: 'history',
     routes: [{
         path: '/',
         component: HelloWorld,
