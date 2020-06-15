@@ -1,4 +1,4 @@
-# zyhzyh|[开发心得][1]
+# zyhzyh | [开发心得][1]
 
 ## Project setup
 ```
