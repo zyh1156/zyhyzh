@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HelloWorld from "../components/HelloWorld"
-import Restore from "../core/store"
 
 Vue.use(VueRouter)
 
@@ -19,7 +18,7 @@ const router = new VueRouter({
         }
     }, {
         path: "/game",
-        component:reRouter("games/index"),
+        component:reRouter("game/index"),
         meta:{
             title:"游戏"
         }

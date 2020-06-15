@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+    src: url('//at.alicdn.com/t/font_1886187_4auwr677m8h.eot?t=1592214496019'); /* IE9 */
+    src: url('//at.alicdn.com/t/font_1886187_4auwr677m8h.eot?t=1592214496019#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPYAAsAAAAAB9AAAAOKAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDKIMAATYCJAMMCwgABCAFhG0HRhvWBlFUTYpkX2DbsCdmzMUECsjPqoSECAECvigqRQAAAQAQD1/7/c7d3Y9agyQatYlWEkMi4olGo5I0EwrVG5XQoWuU/P5ae90A8aqEP7oA88E7gr0NUgFVG1sg1dqyMECoOlGVHZkbYpJMkmhiNKtWGSWKVbX1/+DVLeGdESKdBcjsr1We8P39ce+0CTbnO+9y+qs2jb056gKMAwp0rEGBBFwgCXqPsQl2P4cJNBlQKmCluXMQhSuMUYE4kkUGhafMSk1taBDqShYWcSFEQzpLgTn3vx8/dBFOUsuMiRs7TTyq/Sj+85ytTk26JPh4TnDLyJiEFGK71L0lKExPCtKkGILrS+sUIY0Vqyp8TNXVmX94JEHUMapbwChmEh/FNhYbbwJx1vjNWercRvYacqtbehh3hjJZ1UrxESvBidlpd+xwuZ4cXo9RaWvQbGCjl2PcTy433OpyuX3i8Xb4/c6fPEct6aWdHJxYF70dlafn+UoDXu7poz5U7APEqONpoAk787KqjbbuJ5ioECKRo8SKPFuDB0Qe42/ViVG841UYGjGU6iS76Xai5Q82Nyd+hTxUMr6Ez/p7/iVnsPUlhGUPhf35t9bgk1EedDI+VVe6Ubm/fMgezuzAyp91RKeda7z/ORwO/wuXtlaKukY/jYbF/ulXsh/Wr3Xwfld3/PqYK4nJen0XBOD330ha6XwyrQYeu0m41qnooxobMXEu5dzRqI0CU3KOGZXSnL5/nPJwwixYt1Lvctc/dvyhAITqIJOgBIj8mh78uN+Yq5TfM3GV/+FRBbzF8F8gXB0U1D7TIMHhvwlv2VJUtWHJRcZsTPdku4mgBCC80c+phy6f+3t7odgZGngcIKnXD1mDQXKhT0JNsymo02AemkxoWd6sGxEkSiPG7REIHW5A0uYFsg6PyIX+CWr6/IU6HREETTYjacNmwyFHNhBgKPCYXcIyZxqCZaORQW0/iHMaQ5JqXzIMxJFj2OvyZHMtYAAZY4ozL/ooFbBATB03k+NA00xsEVMBjrokSq1yt1soe5GLM3UUaRkBGBTgYawlmIxjMghuZyoy9/l+QDRHwyA1TRXVYYBwyL1jXi6eFuQWg9Gq6VqeccwT+VCUABMQJh3WTJxAM9MmzCrvpwAcykXqkbSUc2M7oa3BNb9Jf75d0MS4LEeKHEXtRDY0SG5hdOhl+CVzblF2JLeElQ0RIQAA') format('woff2'),
+    url('//at.alicdn.com/t/font_1886187_4auwr677m8h.woff?t=1592214496019') format('woff'),
+    url('//at.alicdn.com/t/font_1886187_4auwr677m8h.ttf?t=1592214496019') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url('//at.alicdn.com/t/font_1886187_4auwr677m8h.svg?t=1592214496019#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-yinle:before {
+    content: "\e7b8";
+  }
+  
+  .icon-GamePadyouxishoubing:before {
+    content: "\e72a";
+  }
+  
