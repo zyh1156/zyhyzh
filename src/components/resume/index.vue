@@ -1,58 +1,27 @@
 <template>
-    <swiper class="swiper-box" ref="mySwiper" :options="swiperOptions">
-      <swiper-slide>
-        <div class="swiper-cont">1</div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="swiper-cont">2</div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="swiper-cont">3</div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="swiper-cont">4</div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="swiper-cont">5</div>
-      </swiper-slide>
-      <div class="swiper-pagination" slot="pagination"></div>
-    </swiper>
-  </template>
-  
-  <script>
-  import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-  import "swiper/css/swiper.css";
-  export default {
-    data() {
-      return {
-        swiperOptions: {
-          mousewheel: true,
-          direction: "vertical",
-          pagination: {
-            el: ".swiper-pagination"
-          }
-        }
-      };
-    },
-    components: {
-      Swiper,
-      SwiperSlide
-    },
-    directives: {
-      swiper: directive
-    },
-    computed: {
-      swiper() {
-        return this.$refs.mySwiper.$swiper;
-      }
-    },
-    mounted() {}
-  };
-  </script>
-  <style lang="scss" scoped>
-  .swiper-box {
-    width: 100vw;
-    height: 100vh;
+  <article class="container-fluid">
+    <div class="row sel-box">
+      <div class="col-md-6 col-sm-12 hr"></div>
+      <div class="col-md-6 col-sm-12 skill"></div>
+    </div>
+  </article>
+</template>
+<script>
+export default {
+  data() {
+    return {};
   }
-  </style>
-  
+};
+</script>
+<style lang="scss" scoped>
+.sel-box {
+  height: 100vh;
+  .hr,.skill{
+  }
+}
+.hr {
+}
+.skill {
+    background-color: #000;
+}
+</style>

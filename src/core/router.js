@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HelloWorld from "../components/HelloWorld"
+import seRouter from "../cube/router"
 
 Vue.use(VueRouter)
 
@@ -18,16 +19,65 @@ const router = new VueRouter({
         }
     }, {
         path: "/game",
-        component:reRouter("game/index"),
-        meta:{
-            title:"游戏"
-        }
-    },{
-        path:"/welcome",
-        component:reRouter("welcome/index"),
-        meata:{
-            title:"欢迎"
-        }
+        component: seRouter,
+        meta: {
+            title: "游戏"
+        },
+        children: [{
+            path: "dota2",
+            component: seRouter,
+            children: [{
+                path: "matches",
+                component: seRouter,
+                children: [{
+                    path: ":match_id",
+                    component: reRouter("game/dota2/matches/index")
+                }, {
+                    path: "",
+                    component: reRouter("game/dota2/index")
+                }]
+            }, {
+                path: "heroStats",
+                component: reRouter("game/dota2/heroStats")
+            }, {
+                path: "leagues",
+                component: reRouter("game/dota2/leagues")
+            }, {
+                path: "live",
+                component: reRouter("game/dota2/live")
+            }, {
+                path: "playersByRank",
+                component: reRouter("game/dota2/playersByRank")
+            }, {
+                path: "schema",
+                component: reRouter("game/dota2/schema")
+            }, {
+                path: "",
+                component: reRouter("game/dota2/index")
+            }]
+        }, {
+            path: "underlords",
+            component: seRouter
+        }, {
+            path: "",
+            component: reRouter("game/index")
+        }]
+    }, {
+        path: "/resume",
+        component: seRouter,
+        children: [{
+            path: "resume",
+            component: reRouter("resume/resume")
+        }, {
+            path: "welcome",
+            component: reRouter("resume/welcome")
+        }, {
+            path: "",
+            component: reRouter("resume/index"),
+            meta: {
+                title: "简历"
+            }
+        }]
     }]
 })
 

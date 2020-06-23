@@ -1,6 +1,6 @@
 module.exports = {
     lintOnSave: false,
     runtimeCompiler: true,
-    publicPath: "./",
+    publicPath:process.env.NODE_ENV === "production" ? "./" : "/",
     productionSourceMap: false
 }
