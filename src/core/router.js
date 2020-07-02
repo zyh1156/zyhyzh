@@ -78,6 +78,13 @@ const router = new VueRouter({
                 title: "简历"
             }
         }]
+    },{
+        path:"/skill",
+        component:seRouter,
+        children:[{
+            path:"img",
+            component:reRouter("skill/img")
+        }]
     }]
 })
 

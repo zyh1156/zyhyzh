@@ -98,7 +98,7 @@ export default {
   background-color: black;
   height: 595px;
   .me-img {
-      padding-top: 50px;
+    padding-top: 50px;
     img {
       width: 380px;
     }
