@@ -67,23 +67,22 @@ const router = new VueRouter({
         component: seRouter,
         children: [{
             path: "resume",
-            component: reRouter("resume/resume")
+            component: reRouter("resume/resume"),
+            meta: {
+                title: "聊聊经历"
+            }
         }, {
             path: "welcome",
-            component: reRouter("resume/welcome")
+            component: reRouter("resume/welcome"),
+            meta: {
+                title: "聊聊技术"
+            }
         }, {
             path: "",
             component: reRouter("resume/index"),
             meta: {
                 title: "简历"
             }
-        }]
-    },{
-        path:"/skill",
-        component:seRouter,
-        children:[{
-            path:"img",
-            component:reRouter("skill/img")
         }]
     }]
 })

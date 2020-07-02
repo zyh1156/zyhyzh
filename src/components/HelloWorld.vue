@@ -10,14 +10,14 @@
     </section>
     <section class="container font-weight-bold pt-3 box1">
       <div class="row">
-        <div class="col-6">
+        <div class="col-lg-6 col-12">
           <div>
             <div class="tips">最新</div>
             <div class="tit mt-4">关于Vue的研究</div>
             <div class="time mt-4">·6月23</div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-12">
           <div>
             <div class="tips">最热</div>
             <div class="mt-4 tit">是什么蒙蔽了我的双眼</div>
@@ -28,8 +28,8 @@
     </section>
     <section class="box2 row justify-content-center">
       <div class="container row">
-        <div class="col-6 me-img">
-          <img src="@/assets/resume/user-img.png" alt />
+        <div class="col-lg-6 col-12 me-img">
+          <img class="img-fluid" src="@/assets/resume/user-img.png" alt />
         </div>
         <div class="col-6"></div>
       </div>
@@ -65,7 +65,7 @@ export default {
 .banner {
   height: 100vh;
   background: black
-    url(https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/international2020/match_predictions_bg.png)
+    url(https://gamevideo.wmupd.com/dota2media/media/ti10battlepass/match_predictions_bg.png)
     right center no-repeat;
   .zyh {
     color: #fff;
