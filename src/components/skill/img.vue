@@ -1,12 +1,5 @@
 <template>
-    <section>
-        <div>
-            <input class="form-control" type="file">
-        </div>
-        <div>
-            <canvas></canvas>
-        </div>
-    </section>
+    <section></section>
 </template>
 <script>
 export default {
@@ -15,6 +8,3 @@ export default {
     }
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
