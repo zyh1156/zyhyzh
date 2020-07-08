@@ -86,11 +86,13 @@ export default {
     height: 470px;
     padding-top: 340px;
     .tips {
+      font-weight: bold;
     }
     .tit {
       font-size: 16px;
     }
     .time {
+      font-weight: normal;
     }
   }
 }
