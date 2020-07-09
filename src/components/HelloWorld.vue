@@ -3,21 +3,22 @@
     <section class="row banner">
       <div class="col-12 d-flex justify-content-center align-items-center text-center">
         <div>
+          <h6>为什么坚持，想一想当初</h6>
           <h1 class="zyh">ZYHZYH</h1>
           <a href="/resume" class="d-block about font-weight-bold">About Me</a>
         </div>
       </div>
     </section>
-    <section class="container font-weight-bold pt-3 box1">
+    <section class="container font-weight-bold p-3 box1">
       <div class="row">
-        <div class="col-lg-6 col-12">
+        <div style="background-image:url('https://vuejs.org/images/logo.png')" class="col-lg-6 p-5 col-12 d-flex align-items-end">
           <div>
             <div class="tips">最新</div>
             <div class="tit mt-4">关于Vue的研究</div>
             <div class="time mt-4">·6月23</div>
           </div>
         </div>
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-6 p-5 col-12 d-flex align-items-end">
           <div>
             <div class="tips">最热</div>
             <div class="mt-4 tit">是什么蒙蔽了我的双眼</div>
@@ -62,13 +63,16 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+article{
+    background-color: #f1f1f1;
+}
 .banner {
+  color: #fff;
   height: 100vh;
   background: black
     url(https://gamevideo.wmupd.com/dota2media/media/ti10battlepass/match_predictions_bg.png)
-    right center no-repeat;
+    right center/auto 66% no-repeat;
   .zyh {
-    color: #fff;
     font: 64px/1 -webkit-pictograph;
     letter-spacing: 6px;
   }
@@ -82,17 +86,16 @@ export default {
   }
 }
 .box1 {
-  .col-6 {
-    height: 470px;
-    padding-top: 340px;
+    background-color: #fff;
+    border-radius: 3px;
+  .col-12 {
+    height: 50vh;
+    background:center no-repeat;
     .tips {
       font-weight: bold;
     }
     .tit {
       font-size: 16px;
-    }
-    .time {
-      font-weight: normal;
     }
   }
 }
