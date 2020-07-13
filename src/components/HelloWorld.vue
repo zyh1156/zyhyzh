@@ -75,6 +75,7 @@ export default {
 .zyh {
   font: 64px/1 -webkit-pictograph;
 }
+// 动画开始前
 .swiper-slide {
   .box0 {
     h5,
@@ -90,6 +91,7 @@ export default {
     }
   }
 }
+// 动画结束后
 .swiper-slide-active {
   .box0 {
     h5,
