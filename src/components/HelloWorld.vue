@@ -1,112 +1,103 @@
 <template>
-  <article class="container-fluid">
-    <section class="row banner">
-      <div class="col-12 d-flex justify-content-center align-items-center text-center">
+  <swiper class="swiper-box" ref="mySwiper" :options="swiperOptions">
+    <swiper-slide>
+      <div class="w-100 h-100 d-flex align-items-center justify-content-center text-center box0">
         <div>
-          <h6>为什么坚持，想一想当初</h6>
           <h1 class="zyh">ZYHZYH</h1>
-          <a href="/resume" class="d-block about font-weight-bold">About Me</a>
+          <h5>的网站</h5>
+          <h3>该怎么写</h3>
         </div>
       </div>
-    </section>
-    <section class="container font-weight-bold p-3 box1">
-      <div class="row">
-        <div style="background-image:url('https://vuejs.org/images/logo.png')" class="col-lg-6 p-5 col-12 d-flex align-items-end">
-          <div>
-            <div class="tips">最新</div>
-            <div class="tit mt-4">关于Vue的研究</div>
-            <div class="time mt-4">·6月23</div>
-          </div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="w-100 h-100 d-flex align-items-center justify-content-center text-center box1">
+        <div>
+          <h5>可能在于</h5>
+          <h2>你想了解什么</h2>
         </div>
-        <div class="col-lg-6 p-5 col-12 d-flex align-items-end">
-          <div>
-            <div class="tips">最热</div>
-            <div class="mt-4 tit">是什么蒙蔽了我的双眼</div>
-            <div class="mt-4 time">·7月28</div>
-          </div>
-        </div>
+        <div></div>
       </div>
-    </section>
-    <section class="box2 row justify-content-center">
-      <div class="container row">
-        <div class="col-lg-6 col-12 me-img">
-          <img class="img-fluid" src="@/assets/resume/user-img.png" alt />
-        </div>
-        <div class="col-6"></div>
-      </div>
-    </section>
-    <section class="row">
-      <div class="col-3"></div>
-      <div class="col-3"></div>
-      <div class="col-6"></div>
-    </section>
-    <!-- 四大分区 -->
-    <section class="row">
-      <div class="col-3"></div>
-      <div class="col-3"></div>
-      <div class="col-3"></div>
-      <div class="col-3"></div>
-    </section>
-    <foot></foot>
-  </article>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="swiper-cont">3</div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="swiper-cont">4</div>
+    </swiper-slide>
+    <swiper-slide>
+      <div class="swiper-cont">5</div>
+    </swiper-slide>
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
 </template>
-
-<script>
-import foot from "../cube/footer";
+  
+  <script>
+import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+import $ from "jquery";
 export default {
   data() {
-    return {};
+    return {
+      swiperOptions: {
+        mousewheel: true,
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination"
+        },
+        on: {
+          slideNextTransitionEnd: function() {
+            console.log(this.activeIndex);
+          }
+        }
+      }
+    };
   },
   components: {
-    foot
-  }
+    Swiper,
+    SwiperSlide
+  },
+  directives: {
+    swiper: directive
+  },
+  computed: {
+    swiper() {
+      return this.$refs.mySwiper.$swiper;
+    }
+  },
+  mounted() {}
 };
 </script>
-<style lang="scss" scoped>
-article{
-    background-color: #f1f1f1;
-}
-.banner {
-  color: #fff;
+  <style lang="scss" scoped>
+.swiper-box {
+  width: 100vw;
   height: 100vh;
-  background: black
-    url(https://gamevideo.wmupd.com/dota2media/media/ti10battlepass/match_predictions_bg.png)
-    right center/auto 66% no-repeat;
-  .zyh {
-    font: 64px/1 -webkit-pictograph;
-    letter-spacing: 6px;
-  }
-  .about {
-    margin: 110px auto 0;
-    width: 144px;
-    height: 58px;
-    line-height: 58px;
-    border-radius: 29px;
-    background-color: #fff;
-  }
 }
-.box1 {
-    background-color: #fff;
-    border-radius: 3px;
-  .col-12 {
-    height: 50vh;
-    background:center no-repeat;
-    .tips {
-      font-weight: bold;
+.zyh {
+  font: 64px/1 -webkit-pictograph;
+}
+.swiper-slide {
+  .box0 {
+    h5,
+    h3 {
+      opacity: 0;
+      transition: all 0.8s;
     }
-    .tit {
-      font-size: 16px;
+    h5 {
+      transform: translateY(-60px);
+    }
+    h3 {
+      transform: translateY(-100px);
     }
   }
 }
-.box2 {
-  background-color: black;
-  height: 595px;
-  .me-img {
-    padding-top: 50px;
-    img {
-      width: 380px;
+.swiper-slide-active {
+  .box0 {
+    h5,
+    h3 {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }
 </style>
+  
