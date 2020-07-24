@@ -1,5 +1,6 @@
 <template>
-    <section>123</section>
+    <section style="height:1024px;">
+    </section>
 </template>
 <script>
 export default {

@@ -17,17 +17,19 @@ export default {
 }
 html::-webkit-scrollbar {
   /*滚动条整体样式*/
-  width: 2px; /*高宽分别对应横竖滚动条的尺寸*/
-  height: 2px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  width: 10px;
+  height: 10px;
   background: transparent;
 }
+
 html::-webkit-scrollbar-thumb {
   /*滚动条里面小方块*/
   border-radius: 10px;
   background-color: skyblue;
   background-size: 100% auto;
-  background-image: -webkit-linear-gradient(
-    45deg,
+  background-image: linear-gradient(
+    /* 45deg, */
     rgba(255, 255, 255, 0.2) 25%,
     transparent 25%,
     transparent 50%,
