@@ -65,6 +65,7 @@ export default {
 <style lang="scss" scoped>
 .sel-box {
   height: 100vh;
+  transition: all .4s linear;
   .tit {
     filter: invert(.8);
   }

@@ -1,105 +1,54 @@
 <template>
-  <swiper class="swiper-box" ref="mySwiper" :options="swiperOptions">
-    <swiper-slide>
-      <div class="w-100 h-100 d-flex align-items-center justify-content-center text-center box0">
-        <div>
-          <h1 class="zyh">ZYHZYH</h1>
-          <h5>的网站</h5>
-          <h3>该怎么写</h3>
-        </div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="w-100 h-100 d-flex align-items-center justify-content-center text-center box1">
-        <div>
-          <h5>可能在于</h5>
-          <h2>你想了解什么</h2>
-        </div>
-        <div></div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="swiper-cont">3</div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="swiper-cont">4</div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="swiper-cont">5</div>
-    </swiper-slide>
-    <div class="swiper-pagination" slot="pagination"></div>
-  </swiper>
+  <section>
+    <div class="box0 text-center">
+      <div class="tit-sup">为什么坚持&nbsp;·&nbsp;想一想当初</div>
+      <div class="zyhzyh">zyhzyh</div>
+      <router-link class="d-flex more" to="/resume">
+          <span class="iconfont icon-read"></span>
+          <span>了解更多</span>
+      </router-link>
+    </div>
+    <div class="box1"></div>
+  </section>
 </template>
-  
-  <script>
-import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
-import $ from "jquery";
+<script>
 export default {
   data() {
-    return {
-      swiperOptions: {
-        mousewheel: true,
-        direction: "vertical",
-        pagination: {
-          el: ".swiper-pagination"
-        },
-        on: {
-          slideNextTransitionEnd: function() {
-            console.log(this.activeIndex);
-          }
-        }
-      }
-    };
-  },
-  components: {
-    Swiper,
-    SwiperSlide
-  },
-  directives: {
-    swiper: directive
-  },
-  computed: {
-    swiper() {
-      return this.$refs.mySwiper.$swiper;
-    }
-  },
-  mounted() {}
+    return {};
+  }
 };
 </script>
-  <style lang="scss" scoped>
-.swiper-box {
-  width: 100vw;
+<style lang="scss" scoped>
+.box0 {
+  color: #fff;
   height: 100vh;
-}
-.zyh {
-  font: 64px/1 -webkit-pictograph;
-}
-// 动画开始前
-.swiper-slide {
-  .box0 {
-    h5,
-    h3 {
-      opacity: 0;
-      transition: all 0.8s;
-    }
-    h5 {
-      transform: translateY(-60px);
-    }
-    h3 {
-      transform: translateY(-100px);
-    }
+  padding-top: 40vh;
+  background: url(https://gamevideo.wmupd.com/dota2media/media/ti10battlepass/match_predictions_bg.png)
+      right center no-repeat,
+    linear-gradient(to right, #030202, #1b292e);
+  .tit-sup {
   }
-}
-// 动画结束后
-.swiper-slide-active {
-  .box0 {
-    h5,
-    h3 {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  .zyhzyh {
+    margin-top: 3vh;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: -webkit-pictograph;
+  }
+  .more{
+      color: #333;
+      width: 144px;
+      height: 48px;
+      margin: 12vh auto 0;
+      background: #fff;
+      border-radius: 24px;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      .iconfont{
+          font-size: 20px;
+          margin-right: 10px;
+      }
   }
 }
 </style>
-  
