@@ -2,5 +2,10 @@ module.exports = {
     lintOnSave: false,
     runtimeCompiler: true,
     publicPath:process.env.NODE_ENV === "production" ? "./" : "/",
-    productionSourceMap: false
+    productionSourceMap: false,
+    configureWebpack:{
+      externals:{
+        'vue':'Vue'
+      }
+    }
 }

@@ -39,6 +39,9 @@ const router = new VueRouter({
             }, {
                 path: "heroStats",
                 component: reRouter("game/dota2/heroStats")
+            },{
+                path:"itemdata",
+                component:reRouter("game/dota2/itemdata")
             }, {
                 path: "leagues",
                 component: reRouter("game/dota2/leagues")
@@ -84,6 +87,9 @@ const router = new VueRouter({
                 title: "简历"
             }
         }]
+    },{
+        path:"/venom",
+        component:reRouter("venom/index")
     }]
 })
 

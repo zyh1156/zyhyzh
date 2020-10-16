@@ -1,5 +1,7 @@
 <template>
-    <section style="height:1024px;">
+    <section>
+        <a href="/game/dota2/leagues">查看联赛</a>
+        <a href="/game/dota2/live">直播</a>
     </section>
 </template>
 <script>

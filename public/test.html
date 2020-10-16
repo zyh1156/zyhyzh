@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>测试文字</h1>
+    <script>
+
+        // 客户端信息
+        var browserInfo = {
+            userAgent: navigator.userAgent.toLowerCase(),
+            isAndroid: Boolean(navigator.userAgent.match(/android/ig)),
+            isIos: Boolean(navigator.userAgent.match(/iphone|ipod|ipad/ig)),
+            isWeChat: Boolean(navigator.userAgent.match(/MicroMessenger/ig)),
+            isQQ: Boolean(navigator.userAgent.match(/ QQ/ig)),
+            isQQBrowser: Boolean(navigator.userAgent.match(/MQQBrowser/ig))
+        }
+
+        function checkOpen(cb) {
+            var _clickTime = +(new Date());
+
+            function check(elsTime) {
+                if (elsTime > 3000 || document.hidden || document.webkitHidden) {
+                    cb(1);
+                } else {
+                    cb(0);
+                }
+            }
+            //启动间隔20ms运行的定时器，并检测累计消耗时间是否超过3000ms，超过则结束
+            var _count = 0,
+                intHandle;
+            intHandle = setInterval(function () {
+                _count++;
+                var elsTime = +(new Date()) - _clickTime;
+                if (_count >= 100 || elsTime > 3000) {
+                    clearInterval(intHandle);
+                    check(elsTime);
+                }
+            }, 20);
+        }
+
+        // 唤醒APP
+        function openApp() {
+            var browser = browserInfo;
+            var scheme = '';
+            var iosVersion = browser.userAgent.match(/os\s*(\d+)/);
+            var universalLink = 'duosea://startup/chatto?uid=100061';
+
+            iosVersion = iosVersion ? (iosVersion[1] || 0) : 0;
+
+            if (browser.isAndroid) { // 安卓
+                scheme = 'duosea://startup/chatto?uid=100061';
+            } else if (browser.isIos) { // ios
+                scheme = 'c';
+            }
+            if (browser.isAndroid) {
+                var ifr = document.createElement('iframe');
+                ifr.src = scheme;
+                ifr.style.display = 'none';
+                document.body.appendChild(ifr);
+
+                setTimeout(function () {
+                    document.body.removeChild(ifr);
+                }, 2000);
+            } else {
+                // ios9+
+                if (iosVersion >= 9) {
+                    document.location.href = universalLink;
+                } else {
+                    setTimeout(function () { // 必须要使用settimeout
+                        var a = document.createElement("a"); //创建a元素
+                        a.setAttribute("href", scheme), a.style.display = "none", document.body.appendChild(a);
+                        var t = document.createEvent("HTMLEvents"); // 返回新创建的 Event 对象，具有指定的类型。
+                        t.initEvent("click", !1, !1) // 初始化新事件对象的属性
+                        a.dispatchEvent(t) // 绑定事件
+                    }, 0)
+                }
+            }
+            checkOpen(function (opened) {
+                // APP没有打开成功  并且开启自动跳转到下载页
+                if (opened === 0) {
+                    location.href = universalLink
+                }
+            });
+
+
+        };
+        openApp();
+
+    </script>
+</body>
+</html>

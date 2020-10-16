@@ -1,0 +1,20 @@
+<template>
+    <section></section>
+</template>
+<script>
+export default {
+    data(){
+        return{}
+    },
+    mounted(){
+        this.getData()
+    },
+    methods:{
+        getData(){
+            this.axios.get("http://www.dota2.com/jsfeed/itemdata?l=schinese").then(res=>{
+                console.log(res);
+            })
+        }
+    }
+}
+</script>
