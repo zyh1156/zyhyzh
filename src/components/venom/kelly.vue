@@ -34,7 +34,7 @@
         </tr>
         <tr>
           <td>收益</td>
-          <td>{{sy}}</td>
+          <td>{{ sy }}</td>
         </tr>
       </tbody>
     </table>
@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     getMoney() {
-      let venom = .85;
+      let venom = 0.85;
       let b = parseFloat(this.jpl),
         p = 1 - b / venom / 2;
       let bj = parseFloat(this.bj);
@@ -63,8 +63,8 @@ export default {
       if (isNaN(bj) || isNaN(b)) {
       } else {
         this.sl = p.toFixed(2);
-        this.tr =(bj* ((p*b)-(1-p))/b).toFixed(2);
-        this.sy=(this.tr*b).toFixed(2);
+        this.tr = ((bj * (p * b - (1 - p))) / b).toFixed(2);
+        this.sy = (this.tr * b).toFixed(2);
       }
     },
   },

@@ -87,10 +87,14 @@ const router = new VueRouter({
                 title: "简历"
             }
         }]
-    },{
-        path:"/venom",
-        component:reRouter("venom/index")
-    }]
+    },
+{
+    path:"/venom",
+    component:reRouter("venom/index"),
+    meta:{
+        title:"苦海无涯，回头是岸"
+    }
+}]
 })
 
 router.beforeEach((to, from, next) => {
