@@ -53,7 +53,7 @@ export default {
   },
   methods: {
     getMoney() {
-      let venom = 0.85;
+      let venom = 0.87;
       let b = parseFloat(this.jpl),
         p = 1 - b / venom / 2;
       let bj = parseFloat(this.bj);
