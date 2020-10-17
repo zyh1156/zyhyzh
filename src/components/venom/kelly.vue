@@ -34,7 +34,7 @@
         </tr>
         <tr>
           <td>收益</td>
-          <td></td>
+          <td>{{sy}}</td>
         </tr>
       </tbody>
     </table>
@@ -56,14 +56,15 @@ export default {
       let venom = .85;
       let b = parseFloat(this.jpl),
         p = 1 - b / venom / 2;
-        b=3;
-        p=0.4;
       let bj = parseFloat(this.bj);
       //   开始计算
+      console.log(bj);
+      console.log(b);
       if (isNaN(bj) || isNaN(b)) {
       } else {
         this.sl = p.toFixed(2);
-        this.tr = ((b * p - 1) / (b - 1));
+        this.tr =(bj* ((p*b)-(1-p))/b).toFixed(2);
+        this.sy=(this.tr*b).toFixed(2);
       }
     },
   },
